@@ -6,3 +6,4 @@ data/processed/*
 data/features/*
 mlruns/
 .dvc/cache/
+.DS_Store
