@@ -1,0 +1,573 @@
+============================================================
+  Anomaly Detector — Continuous Mode
+============================================================
+[detector] Model loaded from: /mnt/32459D5A7D6341F9/Project_Files/personal/realtime-log-anomaly-detection/data/models/isolation_forest.pkl
+[detector] Anomaly threshold: 0.65
+[detector] Polling interval:  60s
+[detector] Press Ctrl+C to stop.
+
+
+[16:45:03] ANOMALY  score=0.9405  window=2026-04-23T11:14:00+00:00 → 2026-04-23T11:15:00+00:00
+           Error rate:      baseline=0.049  current=0.024
+           Login failures:  baseline=0.100  current=0.044
+           Avg latency:     baseline=159.9ms  current=160.8ms
+           Payment timeouts:baseline=0.009  current=0.011
+
+[16:46:03] ANOMALY  score=0.9387  window=2026-04-23T11:15:00+00:00 → 2026-04-23T11:16:00+00:00
+           Error rate:      baseline=0.049  current=0.025
+           Login failures:  baseline=0.100  current=0.054
+           Avg latency:     baseline=159.9ms  current=163.8ms
+           Payment timeouts:baseline=0.009  current=0.007
+
+[16:47:03] ANOMALY  score=0.7445  window=2026-04-23T11:16:00+00:00 → 2026-04-23T11:17:00+00:00
+           Top patterns:
+             • payment failure rate                deviation=1.43x
+             • payment failure count               deviation=1.38x
+             • high latency rate                   deviation=1.15x
+             • high latency count                  deviation=1.04x
+           Error rate:      baseline=0.049  current=0.029
+           Login failures:  baseline=0.100  current=0.060
+           Avg latency:     baseline=159.9ms  current=164.7ms
+           Payment timeouts:baseline=0.009  current=0.010
+
+[16:48:03] ANOMALY  score=0.9044  window=2026-04-23T11:17:00+00:00 → 2026-04-23T11:18:00+00:00
+           Top patterns:
+             • p95 latency                         deviation=1.17x
+             • payment timeout count               deviation=1.02x
+           Error rate:      baseline=0.049  current=0.025
+           Login failures:  baseline=0.100  current=0.042
+           Avg latency:     baseline=159.9ms  current=158.7ms
+           Payment timeouts:baseline=0.009  current=0.013
+
+[16:49:03] normal   score=0.3843  window=2026-04-23T11:18:00+00:00 → 2026-04-23T11:19:00+00:00
+
+[16:50:04] ANOMALY  score=0.7919  window=2026-04-23T11:19:00+00:00 → 2026-04-23T11:20:00+00:00
+           Affected services: payment-service, api-gateway
+           Top patterns:
+             • payment timeout count               deviation=4.83x
+             • high latency count                  deviation=3.64x
+             • payment timeout rate                deviation=1.46x
+             • payment failure count               deviation=1.38x
+           Error rate:      baseline=0.049  current=0.027
+           Login failures:  baseline=0.100  current=0.048
+           Avg latency:     baseline=159.9ms  current=161.4ms
+           Payment timeouts:baseline=0.009  current=0.016
+
+[16:51:04] ANOMALY  score=0.7382  window=2026-04-23T11:20:00+00:00 → 2026-04-23T11:21:00+00:00
+           Affected services: payment-service, api-gateway
+           Top patterns:
+             • payment timeout count               deviation=5.53x
+             • high latency count                  deviation=4.09x
+             • payment failure count               deviation=1.55x
+             • payment timeout rate                deviation=1.41x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.026
+           Login failures:  baseline=0.100  current=0.041
+           Avg latency:     baseline=159.9ms  current=161.4ms
+           Payment timeouts:baseline=0.009  current=0.015
+
+[16:52:04] ANOMALY  score=0.7849  window=2026-04-23T11:21:00+00:00 → 2026-04-23T11:22:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=4.04x
+             • payment timeout count               deviation=2.75x
+             • payment failure count               deviation=1.55x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.024
+           Login failures:  baseline=0.100  current=0.050
+           Avg latency:     baseline=159.9ms  current=161.4ms
+           Payment timeouts:baseline=0.009  current=0.010
+
+[16:53:04] ANOMALY  score=0.7237  window=2026-04-23T11:22:00+00:00 → 2026-04-23T11:23:00+00:00
+           Affected services: payment-service, api-gateway
+           Top patterns:
+             • payment failure count               deviation=4.32x
+             • high latency count                  deviation=3.75x
+             • payment timeout count               deviation=2.06x
+             • p95 latency                         deviation=1.17x
+             • payment failure rate                deviation=1.05x
+           Error rate:      baseline=0.049  current=0.029
+           Login failures:  baseline=0.100  current=0.049
+           Avg latency:     baseline=159.9ms  current=157.9ms
+           Payment timeouts:baseline=0.009  current=0.008
+
+[16:54:04] ANOMALY  score=0.7474  window=2026-04-23T11:23:00+00:00 → 2026-04-23T11:24:00+00:00
+           Affected services: payment-service, api-gateway
+           Top patterns:
+             • payment timeout count               deviation=3.79x
+             • high latency count                  deviation=3.36x
+             • payment failure count               deviation=2.59x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.029
+           Login failures:  baseline=0.100  current=0.058
+           Avg latency:     baseline=159.9ms  current=156.9ms
+           Payment timeouts:baseline=0.009  current=0.012
+
+[16:55:04] ANOMALY  score=0.7672  window=2026-04-23T11:24:00+00:00 → 2026-04-23T11:25:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=3.59x
+             • payment timeout count               deviation=2.75x
+             • payment failure count               deviation=1.72x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.024
+           Login failures:  baseline=0.100  current=0.046
+           Avg latency:     baseline=159.9ms  current=159.2ms
+           Payment timeouts:baseline=0.009  current=0.010
+[16:56:04] No logs in last window. Waiting...
+
+[16:57:04] normal   score=0.5721  window=2026-04-23T11:26:00+00:00 → 2026-04-23T11:27:00+00:00
+
+[16:58:04] ANOMALY  score=0.8933  window=2026-04-23T11:27:00+00:00 → 2026-04-23T11:28:00+00:00
+           Top patterns:
+             • p95 latency                         deviation=1.17x
+             • payment timeout count               deviation=1.02x
+           Error rate:      baseline=0.049  current=0.029
+           Login failures:  baseline=0.100  current=0.055
+           Avg latency:     baseline=159.9ms  current=159.3ms
+           Payment timeouts:baseline=0.009  current=0.012
+
+[16:59:04] normal   score=0.6215  window=2026-04-23T11:28:00+00:00 → 2026-04-23T11:29:00+00:00
+
+[17:00:04] ANOMALY  score=0.7835  window=2026-04-23T11:29:00+00:00 → 2026-04-23T11:30:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=4.77x
+             • payment failure count               deviation=3.97x
+             • payment timeout count               deviation=2.40x
+           Error rate:      baseline=0.049  current=0.029
+           Login failures:  baseline=0.100  current=0.056
+           Avg latency:     baseline=159.9ms  current=164.2ms
+           Payment timeouts:baseline=0.009  current=0.009
+
+[17:01:04] ANOMALY  score=0.7798  window=2026-04-23T11:30:00+00:00 → 2026-04-23T11:31:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=4.88x
+             • payment timeout count               deviation=4.14x
+             • payment failure count               deviation=3.11x
+           Error rate:      baseline=0.049  current=0.026
+           Login failures:  baseline=0.100  current=0.049
+           Avg latency:     baseline=159.9ms  current=162.8ms
+           Payment timeouts:baseline=0.009  current=0.013
+
+[17:02:04] ANOMALY  score=0.7455  window=2026-04-23T11:31:00+00:00 → 2026-04-23T11:32:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=3.30x
+             • payment timeout count               deviation=2.06x
+             • payment failure count               deviation=1.72x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.024
+           Login failures:  baseline=0.100  current=0.044
+           Avg latency:     baseline=159.9ms  current=157.3ms
+           Payment timeouts:baseline=0.009  current=0.009
+
+[17:03:04] ANOMALY  score=0.7645  window=2026-04-23T11:32:00+00:00 → 2026-04-23T11:33:00+00:00
+           Affected services: payment-service, api-gateway
+           Top patterns:
+             • payment timeout count               deviation=2.75x
+             • high latency count                  deviation=2.40x
+             • p95 latency                         deviation=1.17x
+             • payment failure count               deviation=1.03x
+           Error rate:      baseline=0.049  current=0.023
+           Login failures:  baseline=0.100  current=0.044
+           Avg latency:     baseline=159.9ms  current=158.1ms
+           Payment timeouts:baseline=0.009  current=0.012
+
+[17:04:04] ANOMALY  score=0.7780  window=2026-04-23T11:33:00+00:00 → 2026-04-23T11:34:00+00:00
+           Top patterns:
+             • p95 latency                         deviation=1.17x
+             • payment failure rate                deviation=1.05x
+             • high latency rate                   deviation=1.00x
+           Error rate:      baseline=0.049  current=0.023
+           Login failures:  baseline=0.100  current=0.046
+           Avg latency:     baseline=159.9ms  current=154.9ms
+           Payment timeouts:baseline=0.009  current=0.011
+
+[17:05:04] ANOMALY  score=0.8621  window=2026-04-23T11:34:00+00:00 → 2026-04-23T11:35:00+00:00
+           Error rate:      baseline=0.049  current=0.023
+           Login failures:  baseline=0.100  current=0.040
+           Avg latency:     baseline=159.9ms  current=164.5ms
+           Payment timeouts:baseline=0.009  current=0.006
+
+[17:06:04] ANOMALY  score=0.9927  window=2026-04-23T11:35:00+00:00 → 2026-04-23T11:36:00+00:00
+           Error rate:      baseline=0.049  current=0.024
+           Login failures:  baseline=0.100  current=0.044
+           Avg latency:     baseline=159.9ms  current=161.0ms
+           Payment timeouts:baseline=0.009  current=0.010
+
+[17:07:04] ANOMALY  score=0.9196  window=2026-04-23T11:36:00+00:00 → 2026-04-23T11:37:00+00:00
+           Error rate:      baseline=0.049  current=0.027
+           Login failures:  baseline=0.100  current=0.061
+           Avg latency:     baseline=159.9ms  current=160.5ms
+           Payment timeouts:baseline=0.009  current=0.006
+
+[17:08:04] ANOMALY  score=0.9241  window=2026-04-23T11:37:00+00:00 → 2026-04-23T11:38:00+00:00
+           Top patterns:
+             • p95 latency                         deviation=1.17x
+             • payment timeout count               deviation=1.02x
+           Error rate:      baseline=0.049  current=0.026
+           Login failures:  baseline=0.100  current=0.052
+           Avg latency:     baseline=159.9ms  current=160.2ms
+           Payment timeouts:baseline=0.009  current=0.013
+
+[17:09:04] ANOMALY  score=0.7457  window=2026-04-23T11:38:00+00:00 → 2026-04-23T11:39:00+00:00
+           Top patterns:
+             • p95 latency                         deviation=1.17x
+             • high latency rate                   deviation=1.03x
+             • payment timeout count               deviation=1.02x
+           Error rate:      baseline=0.049  current=0.027
+           Login failures:  baseline=0.100  current=0.059
+           Avg latency:     baseline=159.9ms  current=154.8ms
+           Payment timeouts:baseline=0.009  current=0.013
+
+[17:10:04] normal   score=0.5639  window=2026-04-23T11:39:00+00:00 → 2026-04-23T11:40:00+00:00
+
+[17:11:04] ANOMALY  score=0.7578  window=2026-04-23T11:40:00+00:00 → 2026-04-23T11:41:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=2.68x
+             • payment failure count               deviation=2.24x
+             • payment timeout count               deviation=1.71x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.028
+           Login failures:  baseline=0.100  current=0.060
+           Avg latency:     baseline=159.9ms  current=161.4ms
+           Payment timeouts:baseline=0.009  current=0.009
+
+[17:12:06] ANOMALY  score=0.7790  window=2026-04-23T11:41:00+00:00 → 2026-04-23T11:42:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=4.38x
+             • payment failure count               deviation=3.11x
+             • payment timeout count               deviation=2.40x
+           Error rate:      baseline=0.049  current=0.030
+           Login failures:  baseline=0.100  current=0.056
+           Avg latency:     baseline=159.9ms  current=161.2ms
+           Payment timeouts:baseline=0.009  current=0.009
+
+[17:13:06] ANOMALY  score=0.7836  window=2026-04-23T11:42:00+00:00 → 2026-04-23T11:43:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=4.32x
+             • payment timeout count               deviation=2.75x
+             • payment failure count               deviation=1.03x
+           Error rate:      baseline=0.049  current=0.026
+           Login failures:  baseline=0.100  current=0.049
+           Avg latency:     baseline=159.9ms  current=160.3ms
+           Payment timeouts:baseline=0.009  current=0.010
+
+[17:14:06] ANOMALY  score=0.7678  window=2026-04-23T11:43:00+00:00 → 2026-04-23T11:44:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=3.81x
+             • payment timeout count               deviation=2.75x
+             • payment failure count               deviation=2.59x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.028
+           Login failures:  baseline=0.100  current=0.051
+           Avg latency:     baseline=159.9ms  current=158.0ms
+           Payment timeouts:baseline=0.009  current=0.010
+
+[17:15:06] ANOMALY  score=0.7530  window=2026-04-23T11:44:00+00:00 → 2026-04-23T11:45:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=4.09x
+             • payment failure count               deviation=2.76x
+             • payment timeout count               deviation=2.40x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.025
+           Login failures:  baseline=0.100  current=0.043
+           Avg latency:     baseline=159.9ms  current=160.2ms
+           Payment timeouts:baseline=0.009  current=0.009
+
+[17:16:06] ANOMALY  score=0.8281  window=2026-04-23T11:45:00+00:00 → 2026-04-23T11:46:00+00:00
+           Affected services: payment-service, api-gateway
+           Top patterns:
+             • payment timeout count               deviation=4.83x
+             • high latency count                  deviation=4.49x
+             • payment failure count               deviation=1.55x
+             • payment timeout rate                deviation=1.07x
+           Error rate:      baseline=0.049  current=0.028
+           Login failures:  baseline=0.100  current=0.054
+           Avg latency:     baseline=159.9ms  current=161.6ms
+           Payment timeouts:baseline=0.009  current=0.014
+
+[17:17:06] ANOMALY  score=0.7868  window=2026-04-23T11:46:00+00:00 → 2026-04-23T11:47:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=4.88x
+             • payment timeout count               deviation=4.14x
+             • payment failure count               deviation=3.45x
+           Error rate:      baseline=0.049  current=0.030
+           Login failures:  baseline=0.100  current=0.052
+           Avg latency:     baseline=159.9ms  current=164.0ms
+           Payment timeouts:baseline=0.009  current=0.013
+
+[17:18:06] ANOMALY  score=0.7723  window=2026-04-23T11:47:00+00:00 → 2026-04-23T11:48:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=3.87x
+             • payment failure count               deviation=2.59x
+             • payment timeout count               deviation=1.71x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.027
+           Login failures:  baseline=0.100  current=0.051
+           Avg latency:     baseline=159.9ms  current=159.8ms
+           Payment timeouts:baseline=0.009  current=0.008
+
+[17:19:06] ANOMALY  score=0.6782  window=2026-04-23T11:48:00+00:00 → 2026-04-23T11:49:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=2.57x
+             • payment failure count               deviation=2.42x
+             • payment timeout count               deviation=2.06x
+             • p95 latency                         deviation=1.17x
+             • high latency rate                   deviation=1.06x
+           Error rate:      baseline=0.049  current=0.028
+           Login failures:  baseline=0.100  current=0.058
+           Avg latency:     baseline=159.9ms  current=155.3ms
+           Payment timeouts:baseline=0.009  current=0.009
+
+[17:20:06] ANOMALY  score=0.7557  window=2026-04-23T11:49:00+00:00 → 2026-04-23T11:50:00+00:00
+           Affected services: payment-service, api-gateway
+           Top patterns:
+             • payment timeout count               deviation=4.14x
+             • high latency count                  deviation=3.64x
+             • payment failure count               deviation=2.59x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.029
+           Login failures:  baseline=0.100  current=0.059
+           Avg latency:     baseline=159.9ms  current=158.2ms
+           Payment timeouts:baseline=0.009  current=0.013
+
+[17:21:06] ANOMALY  score=0.7212  window=2026-04-23T11:50:00+00:00 → 2026-04-23T11:51:00+00:00
+           Affected services: payment-service, api-gateway
+           Top patterns:
+             • payment failure count               deviation=4.14x
+             • high latency count                  deviation=3.47x
+             • payment timeout count               deviation=3.10x
+             • p95 latency                         deviation=1.17x
+             • payment failure rate                deviation=1.01x
+           Error rate:      baseline=0.049  current=0.026
+           Login failures:  baseline=0.100  current=0.042
+           Avg latency:     baseline=159.9ms  current=158.4ms
+           Payment timeouts:baseline=0.009  current=0.011
+
+[17:22:06] ANOMALY  score=0.7457  window=2026-04-23T11:51:00+00:00 → 2026-04-23T11:52:00+00:00
+           Affected services: payment-service, api-gateway
+           Top patterns:
+             • payment timeout count               deviation=4.14x
+             • high latency count                  deviation=3.64x
+             • payment failure count               deviation=3.63x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.029
+           Login failures:  baseline=0.100  current=0.053
+           Avg latency:     baseline=159.9ms  current=158.3ms
+           Payment timeouts:baseline=0.009  current=0.013
+
+[17:23:06] ANOMALY  score=0.7729  window=2026-04-23T11:52:00+00:00 → 2026-04-23T11:53:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=3.92x
+             • payment failure count               deviation=2.76x
+             • payment timeout count               deviation=2.40x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.028
+           Login failures:  baseline=0.100  current=0.052
+           Avg latency:     baseline=159.9ms  current=160.9ms
+           Payment timeouts:baseline=0.009  current=0.009
+
+[17:24:07] ANOMALY  score=0.6695  window=2026-04-23T11:53:00+00:00 → 2026-04-23T11:54:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=5.51x
+             • payment timeout count               deviation=4.48x
+             • payment failure count               deviation=2.42x
+             • high latency rate                   deviation=1.19x
+             • average latency                     deviation=1.17x
+           Error rate:      baseline=0.049  current=0.028
+           Login failures:  baseline=0.100  current=0.057
+           Avg latency:     baseline=159.9ms  current=166.2ms
+           Payment timeouts:baseline=0.009  current=0.013
+
+[17:25:07] ANOMALY  score=0.7415  window=2026-04-23T11:54:00+00:00 → 2026-04-23T11:55:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=3.25x
+             • payment failure count               deviation=3.11x
+             • payment timeout count               deviation=1.71x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.028
+           Login failures:  baseline=0.100  current=0.056
+           Avg latency:     baseline=159.9ms  current=156.6ms
+           Payment timeouts:baseline=0.009  current=0.008
+
+[17:26:07] ANOMALY  score=0.8042  window=2026-04-23T11:55:00+00:00 → 2026-04-23T11:56:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=4.38x
+             • payment timeout count               deviation=2.40x
+             • payment failure count               deviation=2.24x
+           Error rate:      baseline=0.049  current=0.023
+           Login failures:  baseline=0.100  current=0.044
+           Avg latency:     baseline=159.9ms  current=161.0ms
+           Payment timeouts:baseline=0.009  current=0.009
+
+[17:27:07] ANOMALY  score=0.7177  window=2026-04-23T11:56:00+00:00 → 2026-04-23T11:57:00+00:00
+           Affected services: payment-service, api-gateway
+           Top patterns:
+             • payment timeout count               deviation=5.18x
+             • high latency count                  deviation=3.92x
+             • payment failure count               deviation=3.63x
+             • payment timeout rate                deviation=1.26x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.027
+           Login failures:  baseline=0.100  current=0.048
+           Avg latency:     baseline=159.9ms  current=159.9ms
+           Payment timeouts:baseline=0.009  current=0.015
+
+[17:28:07] ANOMALY  score=0.7847  window=2026-04-23T11:57:00+00:00 → 2026-04-23T11:58:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=4.77x
+             • payment timeout count               deviation=2.75x
+             • payment failure count               deviation=2.42x
+           Error rate:      baseline=0.049  current=0.023
+           Login failures:  baseline=0.100  current=0.043
+           Avg latency:     baseline=159.9ms  current=164.4ms
+           Payment timeouts:baseline=0.009  current=0.010
+
+[17:29:07] ANOMALY  score=0.7523  window=2026-04-23T11:58:00+00:00 → 2026-04-23T11:59:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=3.81x
+             • payment failure count               deviation=3.45x
+             • payment timeout count               deviation=2.75x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.028
+           Login failures:  baseline=0.100  current=0.050
+           Avg latency:     baseline=159.9ms  current=157.8ms
+           Payment timeouts:baseline=0.009  current=0.010
+
+[17:30:07] ANOMALY  score=0.7461  window=2026-04-23T11:59:00+00:00 → 2026-04-23T12:00:00+00:00
+           Affected services: api-gateway, payment-service
+           Top patterns:
+             • high latency count                  deviation=3.30x
+             • payment failure count               deviation=2.07x
+             • payment timeout count               deviation=2.06x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.029
+           Login failures:  baseline=0.100  current=0.057
+           Avg latency:     baseline=159.9ms  current=156.7ms
+           Payment timeouts:baseline=0.009  current=0.009
+
+[17:31:07] ANOMALY  score=0.8411  window=2026-04-23T12:00:00+00:00 → 2026-04-23T12:01:00+00:00
+           Top patterns:
+             • high latency count                  deviation=1.50x
+             • notification failure rate           deviation=1.21x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.023
+           Login failures:  baseline=0.100  current=0.052
+           Avg latency:     baseline=159.9ms  current=157.3ms
+           Payment timeouts:baseline=0.009  current=0.007
+
+[17:32:07] ANOMALY  score=0.9163  window=2026-04-23T12:01:00+00:00 → 2026-04-23T12:02:00+00:00
+           Top patterns:
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.026
+           Login failures:  baseline=0.100  current=0.052
+           Avg latency:     baseline=159.9ms  current=162.5ms
+           Payment timeouts:baseline=0.009  current=0.007
+
+[17:33:07] ANOMALY  score=0.6653  window=2026-04-23T12:02:00+00:00 → 2026-04-23T12:03:00+00:00
+           Top patterns:
+             • payment failure rate                deviation=1.43x
+             • payment failure count               deviation=1.38x
+             • high latency rate                   deviation=1.24x
+             • average latency                     deviation=1.19x
+             • high latency count                  deviation=1.10x
+           Error rate:      baseline=0.049  current=0.033
+           Login failures:  baseline=0.100  current=0.069
+           Avg latency:     baseline=159.9ms  current=166.3ms
+           Payment timeouts:baseline=0.009  current=0.006
+
+[17:34:07] ANOMALY  score=0.9773  window=2026-04-23T12:03:00+00:00 → 2026-04-23T12:04:00+00:00
+           Error rate:      baseline=0.049  current=0.024
+           Login failures:  baseline=0.100  current=0.042
+           Avg latency:     baseline=159.9ms  current=160.7ms
+           Payment timeouts:baseline=0.009  current=0.008
+
+[17:35:07] ANOMALY  score=0.7979  window=2026-04-23T12:04:00+00:00 → 2026-04-23T12:05:00+00:00
+           Top patterns:
+             • payment failure rate                deviation=1.36x
+             • payment failure count               deviation=1.20x
+             • average latency                     deviation=1.09x
+           Error rate:      baseline=0.049  current=0.029
+           Login failures:  baseline=0.100  current=0.052
+           Avg latency:     baseline=159.9ms  current=165.8ms
+           Payment timeouts:baseline=0.009  current=0.006
+
+[17:36:07] ANOMALY  score=0.7091  window=2026-04-23T12:05:00+00:00 → 2026-04-23T12:06:00+00:00
+           Top patterns:
+             • average latency                     deviation=1.74x
+             • high latency rate                   deviation=1.45x
+             • payment timeout count               deviation=1.36x
+             • p95 latency                         deviation=1.18x
+             • payment timeout rate                deviation=1.07x
+           Error rate:      baseline=0.049  current=0.025
+           Login failures:  baseline=0.100  current=0.046
+           Avg latency:     baseline=159.9ms  current=150.6ms
+           Payment timeouts:baseline=0.009  current=0.014
+
+[17:37:07] ANOMALY  score=0.7500  window=2026-04-23T12:06:00+00:00 → 2026-04-23T12:07:00+00:00
+           Affected services: payment-service
+           Top patterns:
+             • payment failure rate                deviation=1.76x
+             • payment failure count               deviation=1.55x
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.029
+           Login failures:  baseline=0.100  current=0.049
+           Avg latency:     baseline=159.9ms  current=155.7ms
+           Payment timeouts:baseline=0.009  current=0.007
+
+[17:38:07] ANOMALY  score=0.8628  window=2026-04-23T12:07:00+00:00 → 2026-04-23T12:08:00+00:00
+           Top patterns:
+             • p95 latency                         deviation=1.17x
+             • average latency                     deviation=1.08x
+           Error rate:      baseline=0.049  current=0.025
+           Login failures:  baseline=0.100  current=0.044
+           Avg latency:     baseline=159.9ms  current=154.1ms
+           Payment timeouts:baseline=0.009  current=0.010
+
+[17:39:07] ANOMALY  score=0.8871  window=2026-04-23T12:08:00+00:00 → 2026-04-23T12:09:00+00:00
+           Top patterns:
+             • p95 latency                         deviation=1.17x
+             • payment timeout count               deviation=1.02x
+           Error rate:      baseline=0.049  current=0.025
+           Login failures:  baseline=0.100  current=0.044
+           Avg latency:     baseline=159.9ms  current=157.0ms
+           Payment timeouts:baseline=0.009  current=0.013
+
+[17:40:07] ANOMALY  score=0.9546  window=2026-04-23T12:09:00+00:00 → 2026-04-23T12:10:00+00:00
+           Error rate:      baseline=0.049  current=0.026
+           Login failures:  baseline=0.100  current=0.048
+           Avg latency:     baseline=159.9ms  current=160.2ms
+           Payment timeouts:baseline=0.009  current=0.010
+
+[17:41:07] ANOMALY  score=0.8880  window=2026-04-23T12:10:00+00:00 → 2026-04-23T12:11:00+00:00
+           Error rate:      baseline=0.049  current=0.026
+           Login failures:  baseline=0.100  current=0.058
+           Avg latency:     baseline=159.9ms  current=164.1ms
+           Payment timeouts:baseline=0.009  current=0.008
+
+[17:42:07] ANOMALY  score=0.9002  window=2026-04-23T12:11:00+00:00 → 2026-04-23T12:12:00+00:00
+           Top patterns:
+             • p95 latency                         deviation=1.17x
+           Error rate:      baseline=0.049  current=0.030
+           Login failures:  baseline=0.100  current=0.057
+           Avg latency:     baseline=159.9ms  current=159.7ms
+           Payment timeouts:baseline=0.009  current=0.010
+
+[17:43:07] ANOMALY  score=0.8823  window=2026-04-23T12:12:00+00:00 → 2026-04-23T12:13:00+00:00

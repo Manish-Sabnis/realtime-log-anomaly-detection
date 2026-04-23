@@ -1,8 +1,13 @@
 __pycache__/
 *.pyc
+*.log
 .env
-data/raw/*
-data/processed/*
-data/features/*
+data/raw/
+data/processed/
+data/features/
+data/models/
 mlruns/
 .dvc/cache/
+logs/
+*.pkl
+*.db
