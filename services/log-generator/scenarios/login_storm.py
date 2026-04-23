@@ -29,7 +29,7 @@ ATTACKER_IPS = [
 
 def generate() -> list[dict]:
     logs = []
-    for _ in range(40):
+    for _ in range(120):
         if random.random() < 0.80:
             logs.append({
                 "timestamp": _ts(),
@@ -52,7 +52,7 @@ def generate() -> list[dict]:
                 "user_id": random.choice(["alice", "bob", "carol"]),
                 "ip": f"192.168.1.{random.randint(1, 50)}",
             })
-    for _ in range(15):
+    for _ in range(45):
         logs.append({
             "timestamp": _ts(),
             "service_name": "api-gateway",
@@ -63,7 +63,7 @@ def generate() -> list[dict]:
             "request_id": str(uuid.uuid4()),
             "latency_ms": random.randint(60, 200),
         })
-    for _ in range(8):
+    for _ in range(24):
         logs.append({
             "timestamp": _ts(),
             "service_name": "payment-service",
@@ -76,7 +76,7 @@ def generate() -> list[dict]:
             "amount": round(random.uniform(5, 200), 2),
             "currency": "USD",
         })
-    for _ in range(6):
+    for _ in range(18):
         logs.append({
             "timestamp": _ts(),
             "service_name": "notification-service",

@@ -23,7 +23,7 @@ def _ts() -> str:
 
 def generate() -> list[dict]:
     logs = []
-    for _ in range(10):
+    for _ in range(30):
         if random.random() < 0.95:
             logs.append({
                 "timestamp": _ts(),
@@ -46,7 +46,7 @@ def generate() -> list[dict]:
                 "user_id": "unknown",
                 "ip": "192.168.1.99",
             })
-    for _ in range(15):
+    for _ in range(45):
         logs.append({
             "timestamp": _ts(),
             "service_name": "api-gateway",
@@ -58,7 +58,7 @@ def generate() -> list[dict]:
             "latency_ms": random.randint(60, 200),
         })
 
-    for _ in range(25):
+    for _ in range(75):
         r = random.random()
         if r < 0.60:
             logs.append({
@@ -100,7 +100,7 @@ def generate() -> list[dict]:
                 "currency": "USD",
             })
 
-    for _ in range(10):
+    for _ in range(30):
         if random.random() < 0.70:
             logs.append({
                 "timestamp": _ts(),
