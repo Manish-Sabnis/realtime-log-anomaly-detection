@@ -1,9 +1,14 @@
 __pycache__/
 *.pyc
+*.log
 .env
-data/raw/*
-data/processed/*
-data/features/*
+data/raw/
+data/processed/
+data/features/
+data/models/
 mlruns/
 .dvc/cache/
 .DS_Store
+logs/
+*.pkl
+*.db
