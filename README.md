@@ -161,7 +161,7 @@ After triggering, wait up to 60 seconds for the detector to score the anomaly wi
 
 ## API Reference
 
-All endpoints are on port 7000.
+All endpoints are on port 7001.
 
 **GET /status**
 
