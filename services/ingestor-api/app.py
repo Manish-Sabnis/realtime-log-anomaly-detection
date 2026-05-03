@@ -26,6 +26,9 @@ from routes import (
     handle_ingest_batch,
     handle_get_logs,
     handle_get_anomalies,
+    handle_dashboard_overview,
+    handle_dashboard_service_health,
+    handle_dashboard_timeline,
     handle_status,
 )
 
@@ -61,6 +64,12 @@ class IngestorHandler(BaseHTTPRequestHandler):
             handle_get_logs(self)
         elif path == "/anomalies":
             handle_get_anomalies(self)
+        elif path == "/dashboard/overview":
+            handle_dashboard_overview(self)
+        elif path == "/dashboard/service-health":
+            handle_dashboard_service_health(self)
+        elif path == "/dashboard/timeline":
+            handle_dashboard_timeline(self)
         else:
             self._not_found()
 
@@ -108,6 +117,9 @@ def main():
     print(f"  POST  http://localhost:{args.port}/ingest/batch")
     print(f"  GET   http://localhost:{args.port}/logs")
     print(f"  GET   http://localhost:{args.port}/anomalies")
+    print(f"  GET   http://localhost:{args.port}/dashboard/overview")
+    print(f"  GET   http://localhost:{args.port}/dashboard/service-health")
+    print(f"  GET   http://localhost:{args.port}/dashboard/timeline")
     print(f"  GET   http://localhost:{args.port}/status")
     print(f"[ingestor-api] Press Ctrl+C to stop.")
 

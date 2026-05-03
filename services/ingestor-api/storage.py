@@ -250,6 +250,10 @@ def insert_anomaly_result(result: dict[str, Any]) -> int:
     with _write_lock:
         conn = get_connection()
         with conn:
+            conn.execute(
+                "DELETE FROM anomaly_results WHERE window_start = ?",
+                (row["window_start"],),
+            )
             cur = conn.execute(sql, row)
             row_id = cur.lastrowid
         conn.close()
@@ -260,7 +264,18 @@ def query_anomaly_results(limit: int = 100) -> list[dict]:
     """Return recent anomaly results, newest first."""
     conn = get_connection()
     rows = conn.execute(
-        "SELECT * FROM anomaly_results ORDER BY window_start DESC LIMIT ?", (limit,)
+        """
+        SELECT *
+        FROM anomaly_results
+        WHERE id IN (
+            SELECT MAX(id)
+            FROM anomaly_results
+            GROUP BY window_start
+        )
+        ORDER BY window_start DESC
+        LIMIT ?
+        """,
+        (limit,),
     ).fetchall()
     conn.close()
     results = []

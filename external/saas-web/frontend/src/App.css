@@ -1,0 +1,211 @@
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f3f4f6;
+  color: #0f172a;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #111827;
+  color: #f9fafb;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.logo-highlight {
+  color: #fbbf24;
+}
+
+.header-search {
+  flex: 1;
+}
+
+.header-search-input {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.header-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-button {
+  padding: 0.35rem 0.8rem;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background: #1f2937;
+}
+
+.nav-button-active {
+  background: #fbbf24;
+  color: #111827;
+}
+
+.app-main {
+  flex: 1;
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.page-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1.25rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.card-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.btn {
+  border-radius: 999px;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #ffffff;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.btn.primary {
+  background: #3b82f6;
+}
+.btn.primary:hover {
+  background: #2563eb;
+}
+
+.btn.success {
+  background: #10b981;
+}
+.btn.success:hover {
+  background: #059669;
+}
+
+.btn.warning {
+  background: #f97316;
+}
+.btn.warning:hover {
+  background: #ea580c;
+}
+
+.btn.danger {
+  background: #ef4444;
+}
+.btn.danger:hover {
+  background: #dc2626;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.result-panel {
+  margin-top: 1.5rem;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.result-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.result-body {
+  font-size: 0.9rem;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.result-message {
+  margin-top: 0.5rem;
+  max-height: 160px;
+  overflow: auto;
+  background: #f9fafb;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 0.75rem;
+  white-space: pre-wrap;
+}
+
+.result-placeholder {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.app-footer {
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  background: #111827;
+}
