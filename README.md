@@ -19,7 +19,7 @@ Log Generator
      |
      | HTTP POST /ingest/batch
      v
-Ingestor API (port 7000)
+Ingestor API (port 7001)
      |
      v
 SQLite Database (data/raw/logs.db)
@@ -90,7 +90,7 @@ The demo has five steps. Run them in order.
 python3 services/ingestor-api/app.py
 ```
 
-This starts the HTTP server on port 7000 and initialises the database. Leave it running in its own terminal.
+This starts the HTTP server on port 7001 and initialises the database. Leave it running in its own terminal.
 
 **Step 2: Wipe any existing data**
 
